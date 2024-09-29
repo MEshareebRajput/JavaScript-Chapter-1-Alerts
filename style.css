@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: linear-gradient(135deg, #1c1c1c 25%, #3b3b3b 50%, #4f4f4f 75%); 
+    margin: 0;
+    padding: 20px;
+    color: #e1e1e1; 
+    overflow: hidden; 
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff; 
+    font-size: 36px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    animation: fadeIn 1s ease-in-out, textAnimation 3s infinite alternate; 
+}
+
+.introduction {
+    background-color: rgba(30, 30, 30, 0.9); 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-in-out forwards; 
+    text-align: center; 
+}
+
+.profile-image {
+    width: 120px; 
+    height: auto; 
+    border-radius: 50%; 
+    margin: 0 auto 20px; 
+    display: block; 
+    animation: rotateImage 1s forwards; 
+}
+
+.introduction a {
+    color: #ffcc00; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.introduction a:hover {
+    color: #ff9900; 
+}
+
+.introduction i {
+    color: #ffcc00; 
+    margin-right: 8px; 
+    transition: color 0.3s ease; 
+}
+
+.introduction i:hover {
+    color: #ff9900; 
+}
+
+.animated-text {
+    opacity: 0; 
+    animation: fadeInText 1s forwards 0.5s; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); 
+        opacity: 0; 
+    }
+    to {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        transform: translateY(50px); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900, 0 0 30px #ffffff;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffcc00, 0 0 30px #ff9900, 0 0 40px #ffffff;
+    }
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+p {
+    font-size: 20px; 
+    color: #e1e1e1;
+    line-height: 1.6;
+    font-weight: 500; 
+    animation: fadeIn 1s ease-in-out; 
+}
